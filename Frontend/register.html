@@ -25,6 +25,9 @@
                 } else if(password != passwordConfirm) {
                     location.href = "?Lösenorden överensstämmer inte!";
 
+                } else if (password.length <3 ) {
+                    location.href = "?Du har valt för kort lösenord";
+
                 } else {
                     location.href = "?<marquee>Anvädaren registrerad! <a href='/'>Logga in här!</a></marquee>";
                 }
