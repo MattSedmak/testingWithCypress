@@ -17,6 +17,12 @@ describe("Login form", () => {
         cy.get("input[name='password']").type("1231231235");
         cy.get("form").submit();
         cy.contains("Fel användarnamn eller lösenord!").end()
+    });
+
+    it("can register", () => {
+        cy.visit("/Frontend/index.html");
+        cy.get("body > main > center > form > div:nth-child(3) > a").click();
+        cy.url().should("include","register.html").end()
     })
 })
 
