@@ -18,20 +18,19 @@
                 if (username.length < 3 || username.length > 12) {
                     location.href = "?För kort eller för långt användarnamn!";
 
-                } else if(!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
-                {
+                } else if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
                     location.href = "?Felformatterad e-postadress!";
 
-                } else if(password != passwordConfirm) {
+                } else if (password != passwordConfirm) {
                     location.href = "?Lösenorden överensstämmer inte!";
 
-                } else if (password.length <3 ) {
+                } else if (password.length < 3) {
                     location.href = "?Du har valt för kort lösenord";
 
                 } else {
-                    location.href = "?<marquee>Anvädaren registrerad! <a href='/'>Logga in här!</a></marquee>";
+                    location.href = "?<marquee>Anvädaren registrerad! <a href='/Frontend/index.html'>Logga in här!</a></marquee>";
                 }
-                
+
             });
 
 
