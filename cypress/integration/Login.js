@@ -25,6 +25,16 @@ describe("Login form", () => {
         cy.get("body > main > center > form > div:nth-child(3) > a").click();
         cy.url().should("include","register.html").end()
     })
+
+    it ("Wrong username, Caps Lock is on", () => {
+        cy.visit("/Frontend/index.html");
+        cy.get("form");
+        cy.get("input[name='username']").type("COOLUSER");
+        cy.get("input[name='password']").type("123123123");
+        cy.get('form').submit();
+        cy.contains("Fel användarnamn eller lösenord!").end()
+
+    })
 })
 
 
