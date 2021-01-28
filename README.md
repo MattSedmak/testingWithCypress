@@ -1,1 +1,1 @@
-#Group project - Testing with cypress#
+Group project - Testing with cypress
